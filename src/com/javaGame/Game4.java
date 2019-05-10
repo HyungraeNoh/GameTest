@@ -1,5 +1,5 @@
 package com.javaGame;
-
+//이강미님 게임
 import java.util.Scanner;
 
 public class Game4 {
