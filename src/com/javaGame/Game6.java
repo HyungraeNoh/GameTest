@@ -1,10 +1,11 @@
 package com.javaGame;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Game6 {
 	int map[][] = {
-			{1,0,0,0,0,0,0,0,0,0,1,},
+			{0,0,0,0,0,0,0,0,0,0,0,},
 			{1,0,0,0,0,0,0,0,0,0,1,},	
 			{1,0,0,0,0,0,0,0,0,0,1,},
 			{1,0,0,0,0,0,0,0,0,0,1,},	
@@ -16,9 +17,10 @@ public class Game6 {
 			{1,1,1,1,1,1,1,1,1,1,1}
 	};
 	
-	int x = 5; 	int y = 8;  	int bx = 5; 	int by = 8;
-	
 	Scanner scan = new Scanner(System.in);
+	Random random = new Random();
+	
+	int x = 5; 	int y = 8;  	int bx = 5; 	int by = 8;
 	
 	public boolean map() {
 		boolean str = true;	
@@ -27,19 +29,22 @@ public class Game6 {
 			y = by;
 			str = false;
 		}
-
+		
 		for(int j = 0; j < map.length; j++) {
+			
 			for(int i = 0; i<map[j].length; i++) {
+					map[0][i] = random.nextInt(2);
 				
-				if(map[j][i] == 1) {
-					System.out.print("■\t");
-				}
-				else if(i == x && j == y) {
-					System.out.print("㉾\t");
-				}
-				else {
-					System.out.print("□\t");
-				}
+				
+					if(map[j][i] == 1) {
+						System.out.print("■\t");
+					}
+					else if(i == x && j == y) {
+						System.out.print("㉾\t");
+					}
+					else if(map[j][i] == 0)  {
+						System.out.print("□\t");
+					}
 			}
 			System.out.println();
 		}
