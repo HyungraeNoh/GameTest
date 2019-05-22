@@ -1,20 +1,20 @@
 package com.javaGame;
-
+//노형래님
 import java.util.Random;
 import java.util.Scanner;
 
 public class Game6 {
 	int map[][] = {
-			{0,0,0,0,0,0,0,0,0,0,0,},
-			{1,0,0,0,0,0,0,0,0,0,1,},	
-			{1,0,0,0,0,0,0,0,0,0,1,},
-			{1,0,0,0,0,0,0,0,0,0,1,},	
-			{1,0,0,0,0,0,0,0,0,0,1,},	
-			{1,0,0,0,0,0,0,0,0,0,1,},	
-			{1,0,0,0,0,0,0,0,0,0,1,},	
-			{1,0,0,0,0,0,0,0,0,0,1,},	
-			{1,0,0,0,0,2,0,0,0,0,1,},	
-			{1,1,1,1,1,1,1,1,1,1,1}
+			{0,0,0,0,0,0,0,0,0,0,0,0},
+			{1,0,0,0,0,0,0,0,0,0,0,1},	
+			{1,0,0,0,0,0,0,0,0,0,0,1},
+			{1,0,0,0,0,0,0,0,0,0,0,1},	
+			{1,0,0,0,0,0,0,0,0,0,0,1},	
+			{1,0,0,0,0,0,0,0,0,0,0,1},	
+			{1,0,0,0,0,0,0,0,0,0,0,1},	
+			{1,0,0,0,0,0,0,0,0,0,0,1},	
+			{1,0,0,0,0,2,0,0,0,0,0,1},	
+			{1,1,1,1,1,1,1,1,1,1,1,1}
 	};
 	
 	Scanner scan = new Scanner(System.in);
@@ -30,19 +30,19 @@ public class Game6 {
 			str = false;
 		}
 		
-		for(int j = 0; j < map.length; j++) {
+		for(int i = 0; i < map.length; i++) {
 			
-			for(int i = 0; i<map[j].length; i++) {
-					map[0][i] = random.nextInt(2);
+			for(int j = 0; j<map[i].length; j++) {
+					map[0][j] = random.nextInt(2);
 				
 				
-					if(map[j][i] == 1) {
+					if(map[i][j] == 1) {
 						System.out.print("■\t");
 					}
-					else if(i == x && j == y) {
+					else if(j == x && i == y) {
 						System.out.print("㉾\t");
 					}
-					else if(map[j][i] == 0)  {
+					else if(map[i][j] == 0)  {
 						System.out.print("□\t");
 					}
 			}
